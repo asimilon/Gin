@@ -63,6 +63,19 @@
 #include <juce_graphics/juce_graphics.h>
 #include <gin/gin.h>
 
+#ifndef GIN_JUCE_MASTER_COMPAT
+#define GIN_JUCE_MASTER_COMPAT
+namespace juce {
+    template <typename Type>
+    constexpr bool exactlyEqual (Type a, Type b)
+    {
+        JUCE_BEGIN_IGNORE_WARNINGS_GCC_LIKE ("-Wfloat-equal")
+        return a == b;
+        JUCE_END_IGNORE_WARNINGS_GCC_LIKE
+    }
+}
+#endif
+
 namespace gin
 {
 #include "formats/gin_bmpimageformat.h"
