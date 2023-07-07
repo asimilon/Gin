@@ -1,6 +1,10 @@
 # Gin
 A few useful extra classes for [JUCE](https://juce.com/) that I've come up with over the years.
 
+This fork differs from upstream by maintaining compatibility with the JUCE release branch and drops the GitHub actions.
+
+I have only maintained compatibility with modules I use, if there are still incompatilibities please either submit a pull request or an issue and I will update accordingly.
+
 Documentation:
 
 [DOxygen Documentation](https://figbug.github.io/Gin/annotated.html)
